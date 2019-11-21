@@ -1,3 +1,3 @@
-from api import mapeamento_v1
+from api import Lista
 
 all = ['Lista']
