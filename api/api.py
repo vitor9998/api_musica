@@ -1,9 +1,9 @@
 from flask import Blueprint, Response, request, jsonify
-from service import Musicas
+from .service import Musicas
 
 
 Lista = Blueprint(
-    "artista", __name__, url_prefix="/v1/musicas"
+    "artista", __name__, url_prefix="/v1/musicas    "
 )
 
 @Lista.route("/artista", methods=["GET"])

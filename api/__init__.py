@@ -1,3 +1,3 @@
-from api import Lista
+from .api import Lista
 
 all = ['Lista']
