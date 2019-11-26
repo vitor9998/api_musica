@@ -3,8 +3,7 @@ import requests
 import unicodedata
 
 class Musicas:
-    def __init__(nome):
-        pass
+    
     def filtro(nome):
         
         nome = nome.replace("","-")
