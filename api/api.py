@@ -1,15 +1,19 @@
 from flask import Blueprint, Response, request, jsonify
 from .service import Musicas
+import requests
+import json
 
 
 Lista = Blueprint(
-    "artista", __name__, url_prefix="/v1/musicas    "
+    "artista", __name__, url_prefix="/v1/musicas"
 )
 
-@Lista.route("/artista", methods=["GET"])
-def artista():
-    service = Musicas()
-    #dados = request.json
-    resultado = service.lista_de_musicas(33)
-    return jsonify(resultado),200
+@Lista.route("/artista/<nome>", methods=["GET"])
+def artista(nome):
+    a = Musicas.filtro(nome)
+    b = json.dumps(a)   
+
+    return b  
+    
+    
 
