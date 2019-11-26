@@ -2,7 +2,7 @@ from flask import Flask
 from api import Lista
 
 app = Flask(__name__)
-app.register_blueprint(Lista)
+app.register_blueprint(Lista)   
 
 try:
     app.run(debug=True)

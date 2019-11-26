@@ -1,5 +1,5 @@
 from flask import Blueprint, Response, request, jsonify
-from .service import Musicas
+from service import Musicas
 import requests
 import json
 
